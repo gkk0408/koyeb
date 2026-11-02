@@ -2,11 +2,14 @@ FROM node:18-alpine
 
 WORKDIR /app
 
+# Install dependencies securely
 COPY package*.json ./
 RUN npm ci --only=production
 
+# Copy application source
 COPY . .
 
-EXPOSE 8080
+# Expose port (Koyeb handles the routing)
+EXPOSE 7860
 
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
