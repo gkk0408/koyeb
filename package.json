@@ -1,4 +1,4 @@
-package.js {
+{
   "name": "esp-bridge-gateway",
   "version": "1.0.0",
   "main": "server.js",
